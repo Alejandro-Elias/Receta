@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+
+    --Young-Serif: "Young Serif";
+    --Outfit: Outfit;
+}
+
+body {
+    font-size: 16px;    
+    font-family: var(--Outfit), sans-serif;
+    color: var(--Dark-Charcoal);
+    font-weight: 600;
+    background-color: rgb(255, 243, 215);
+}
+
+main {
+    padding: 30px;
+}
+
+h1 {
+    font-family: var(--Young-Serif), sans-serif;    
+    margin-bottom: 20px;
+}
+
+.header-img-content {
+    height: 170px;
+    background: url("./assets/images/image-omelette.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.preparation {
+    flex-direction: column;
+    background-color: var(--Rose-White);    
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+}
+
+.preparation h3 {
+    color: var(--Dark-Raspberry);
+}
+
+h2 {
+    color: var(--Nutmeg);
+    font-family: var(--Young-Serif);
+    margin-bottom: 25px;
+}
+
+ul, ol {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 15px;    
+    justify-content: center;
+    padding-left: 40px; 
+    position: relative;
+}
+
+ol {
+    counter-reset: item; 
+}
+
+ol li {
+    position: relative;
+    padding-left: 5px; 
+    counter-increment: item;
+    list-style-type: none;
+}
+
+ol li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: -30px;
+    color: var(--Dark-Raspberry);
+    font-weight: bold;
+}
+
+ul li {
+    position: relative;
+    padding-left: 5px; 
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "•"; 
+    position: absolute;
+    left: -30px; 
+    color: var(--Dark-Raspberry); 
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+
+span {
+    font-weight: 800;
+}
+
+hr {
+    margin: 25px 0;
+}
+
+.linea-nutri {
+    margin: 10px 0;
+}
+
+.desc-nutri {
+    margin-bottom: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.datos {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.datos p {
+    width: 50%;
+}
+
+.datos p:nth-last-of-type(1) {
+    color: var(--Dark-Raspberry);
+}
+
+@media (min-width: 1024px) {
+      body {
+        padding: 20px;        
+      }      
+}
