@@ -144,5 +144,9 @@ hr {
 @media (min-width: 1024px) {
       body {
         padding: 20px;        
-      }      
+      }    
+      
+      .header-img-content {
+        height: 600px;
+      }
 }
